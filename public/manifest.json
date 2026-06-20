@@ -1,0 +1,22 @@
+{
+  "name": "لَمَّة — Lamma",
+  "short_name": "لَمَّة",
+  "description": "تجمعات حميمية في الكويت",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F4EDE0",
+  "theme_color": "#B85C3E",
+  "categories": ["lifestyle", "social", "events"],
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "التجمعات", "short_name": "تجمعات", "url": "/gatherings" },
+    { "name": "المساعد الذكي", "short_name": "مساعد", "url": "/dashboard/concierge" }
+  ]
+}

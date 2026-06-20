@@ -1,0 +1,828 @@
+{
+  "meta": {
+    "title": "لَمَّة — تجمعات حميمية كويتية",
+    "description": "منصة كويتية لتجمعات حميمية مُنتقاة. نتعامل مع الفعاليات كحوارٍ، لا كمعاملة.",
+    "localeName": "العربية",
+    "localeSwitchTo": "English"
+  },
+  "nav": {
+    "gatherings": "تجمعات",
+    "hosts": "أصحاب",
+    "topics": "مواضيع",
+    "letters": "رسائل",
+    "account": "حسابي",
+    "openMenu": "افتح القائمة",
+    "closeMenu": "أغلق القائمة",
+    "switchLocale": "تبديل اللغة",
+    "concierge": "المساعد الذكي"
+  },
+  "footer": {
+    "titles": {
+      "about": "عن لَمَّة",
+      "help": "المساعدة",
+      "contact": "تواصل"
+    },
+    "about": {
+      "story": "قصتنا",
+      "manifesto": "البيان",
+      "team": "الفريق"
+    },
+    "help": {
+      "faq": "أسئلة شائعة",
+      "apply": "كيف أنضمّ؟",
+      "host": "كن صاحب لمة",
+      "conduct": "ميثاق السلوك"
+    },
+    "contact": {
+      "email": "hello@lamma.kw",
+      "instagram": "إنستغرام",
+      "x": "إكس"
+    },
+    "rights": "© 2026 لَمَّة. صُنع بحب في الكويت."
+  },
+  "hero": {
+    "eyebrow": "رسالة من لمة",
+    "readFullLetter": "اقرأ الرسالة كاملة",
+    "byAuthor": "بقلم",
+    "featuredGathering": "اللمة المميّزة",
+    "applyNow": "قدّم الآن",
+    "viewGathering": "تفاصيل اللمة"
+  },
+  "sections": {
+    "upcomingGatherings": "اللمات القادمة",
+    "upcomingGatheringsHint": "باب التقديم مفتوح الآن",
+    "hosts": "أصحاب التجمعات",
+    "hostsHint": "من يجمعنا",
+    "topics": "المواضيع التحريرية",
+    "topicsHint": "ستّ محاور تنتظم حولها كل لمة",
+    "letters": "رسائل من لمة",
+    "lettersHint": "ما يُكتب بعد أن تنفضّ اللمة",
+    "newsletter": "نشرة لمة",
+    "newsletterTitle": "رسالةٌ واحدة في الشهر. لا ضجيج.",
+    "newsletterDesc": "نخبرك فيها باللمات القادمة، وبأطروحةٍ تحريرية واحدة تستحقّ القراءة. لا إعلانات، لا سبام.",
+    "newsletterPlaceholder": "بريدك الإلكتروني",
+    "newsletterSubscribe": "اشترك",
+    "newsletterSuccess": "شكراً. ستصلك الرسالة القادمة قريباً."
+  },
+  "gatherings": {
+    "capacity": "السعة",
+    "seatsFilled": "مقعد مُعبّر",
+    "seatsFilled_plural": "مقاعد مُعبّرة",
+    "of": "من",
+    "free": "مجاني",
+    "priceFrom": "يبدأ من",
+    "kwd": "د.ك",
+    "applicationDeadline": "يغلق التقديم",
+    "startsAt": "يبدأ",
+    "viewAll": "كل اللمات",
+    "viewGathering": "تفاصيل اللمة",
+    "prayerAware": "مراعاة الصلاة",
+    "prayerAwareDesc": "تُقام اللمة بعد صلاة العشاء مباشرةً",
+    "breadcrumbs": "اللمات",
+    "listingTitle": "اللمات القادمة",
+    "listingSubtitle": "أبواب التقديم مفتوحة الآن. اخترنا كل لمةٍ بعنايةٍ لتكون تجربةً لا فعاليةً.",
+    "aboutThisGathering": "عن هذه اللمة",
+    "whoShouldAttend": "لمن هذه اللمة؟",
+    "whatToExpect": "ماذا تتوقّع؟",
+    "gallery": "معرض الصور",
+    "relatedGatherings": "لمات أخرى قد تهمّك",
+    "applyNow": "قدّم الآن",
+    "applicationsClosed": "التقديم مغلق",
+    "applicationOpens": "يفتح التقديم",
+    "applicationCloses": "يغلق التقديم",
+    "hostedBy": "باستضافة",
+    "venue": "المكان",
+    "format": "الصيغة",
+    "capacityInfo": "{filled} من {total} مقعد",
+    "venueNotes": "ملاحظات المكان",
+    "applicationCta": "قدّم لهذه اللمة",
+    "applyNote": "الطلب لا يضمن الحضور — يُراجَع من صاحب اللمة",
+    "applicationsCloseIn": "يغلق التقديم {time}",
+    "alreadyApplied": "لقد قدّمت طلباً لهذه اللمة",
+    "applicationId": "رقم الطلب",
+    "currentStatus": "الحالة الحالية",
+    "viewInDashboard": "عرض في لوحتي",
+    "closed": "مغلق",
+    "loginToApply": "سجّل الدخول للتقديم",
+    "fullyBooked": "مكتمل",
+    "locationHidden": "العنوان يُكشف بعد القبول",
+    "mapPreview": "معاينة الخريطة",
+    "approved": "مقبولون",
+    "pending": "قيد المراجعة",
+    "waitlisted": "قائمة الانتظار",
+    "applyCta": "قدّم طلباً",
+    "price": "السعر",
+    "location": "الموقع",
+    "related": "لمات ذات صلة"
+  },
+  "hosts": {
+    "verified": "موثّق",
+    "gatheringsHosted": "لمة استضافها",
+    "totalAttendees": "ضيف",
+    "avgRating": "التقييم",
+    "responseTime": "يستجيب خلال",
+    "hours": "ساعة",
+    "viewProfile": "الملف الكامل",
+    "breadcrumbs": "الأصحاب",
+    "listingTitle": "أصحاب اللمات",
+    "listingSubtitle": "خمسةٌ من يجمعوننا — مؤرّخ، ومصوّرة، وطاهية، وشاعر، وناقدة. كلٌّ يفتح بابه على طريقته.",
+    "upcomingGatherings": "لمات قادمة",
+    "pastGatherings": "لمات سابقة",
+    "hostLetters": "رسائل المضيف",
+    "stats": "إحصاءات",
+    "specialties": "تخصّصات",
+    "bio": "نبذة",
+    "gatheringsHostedCount": "{count} لمة",
+    "attendeesCount": "{count} ضيف"
+  },
+  "topics": {
+    "explore": "استكشف الموضوع",
+    "gatheringsUnder": "لمة تحت هذا الموضوع",
+    "breadcrumbs": "المواضيع",
+    "listingTitle": "المواضيع التحريرية",
+    "listingSubtitle": "ستّة محاور تنتظم حولها كل لمة. اختر محورك، أو دع المحور يختارك.",
+    "gatheringsCount": "لمة",
+    "lettersCount": "رسالة",
+    "upcoming": "قادمة",
+    "past": "سابقة",
+    "letters": "رسائل",
+    "noGatherings": "لا توجد لمات تحت هذا الموضوع بعد.",
+    "noLetters": "لا توجد رسائل تحت هذا الموضوع بعد.",
+    "topicHero": "الموضوع"
+  },
+  "letters": {
+    "readMore": "أكمل القراءة",
+    "readTime": "دقائق قراءة",
+    "minRead": "د قراءة",
+    "publishedOn": "نُشر في",
+    "byAuthor": "بقلم",
+    "breadcrumbs": "الرسائل",
+    "listingTitle": "رسائل من لمة",
+    "listingSubtitle": "ما يُكتب بعد أن تنفضّ اللمة. كل رسالةٍ شهادةٌ بطيئة على ليلةٍ أو مكان.",
+    "featured": "الرسالة المميّزة",
+    "moreLetters": "المزيد من الرسائل",
+    "aiSummaryLabel": "ملخص بالذكاء الاصطناعي",
+    "moreLettersTitle": "اقرأ أيضاً",
+    "title": "رسائل من لمة",
+    "subtitle": "حكاياتٌ تُروى بعد كل تجمّع",
+    "description": "كل لمةٍ تترك أثراً، وهذه الرسائل تحفظ ذلك الأثر.",
+    "share": "شارك",
+    "copyLink": "انسخ الرابط",
+    "aboutAuthor": "عن الكاتب"
+  },
+  "prayer": {
+    "label": "مواقيت الصلاة",
+    "next": "الصلاة القادمة",
+    "in": "بعد",
+    "fajr": "الفجر",
+    "sunrise": "الشروق",
+    "dhuhr": "الظهر",
+    "asr": "العصر",
+    "maghrib": "المغرب",
+    "isha": "العشاء",
+    "awareNote": "هذه اللمة تراعي مواقيت الصلاة"
+  },
+  "formats": {
+    "MEN_ONLY": "رجال فقط",
+    "WOMEN_ONLY": "نساء فقط",
+    "FAMILY": "عوائل",
+    "MIXED": "مختلطة"
+  },
+  "membership": {
+    "NEWCOMER": "قادم جديد",
+    "REGULAR": "عضو دائم",
+    "CURATOR": "منسّق",
+    "HOST": "صاحب لمة"
+  },
+  "application_status": {
+    "PENDING": "قيد المراجعة",
+    "APPROVED": "مقبول",
+    "REJECTED": "مرفوض",
+    "WAITLISTED": "قائمة الانتظار",
+    "CANCELLED": "ملغى",
+    "ATTENDED": "حضر",
+    "NO_SHOW": "لم يحضر",
+    "DRAFT": "مسودّة",
+    "PUBLISHED": "منشور",
+    "APPLICATIONS_OPEN": "التقديم مفتوح",
+    "APPLICATIONS_CLOSED": "التقديم مغلق",
+    "IN_PROGRESS": "جارية",
+    "COMPLETED": "اكتملت"
+  },
+  "status": {
+    "DRAFT": "مسودّة",
+    "PUBLISHED": "منشور",
+    "APPLICATIONS_OPEN": "التقديم مفتوح",
+    "APPLICATIONS_CLOSED": "التقديم مغلق",
+    "IN_PROGRESS": "جارية الآن",
+    "COMPLETED": "اكتملت",
+    "CANCELLED": "ملغاة"
+  },
+  "common": {
+    "loading": "جارٍ التحميل…",
+    "error": "حدث خطأ ما",
+    "retry": "إعادة المحاولة",
+    "back": "رجوع",
+    "more": "المزيد",
+    "soon": "قريباً",
+    "placeholder": "هذا القسم يُبنى في مرحلة قادمة"
+  },
+  "ai": {
+    "poweredBy": "مدعوم بالذكاء الاصطناعي",
+    "generating": "جارٍ التوليد...",
+    "done": "تم",
+    "aiSummary": "ملخص بالـ AI",
+    "aiInsight": "رؤية ذكية",
+    "summarizing": "جارٍ تلخيص المقال...",
+    "analyzingApplicant": "جارٍ تحليل المتقدم...",
+    "enhanceDescription": "تحسين بالـ AI",
+    "suggestQuestions": "اقترح أسئلة",
+    "nlSearchPlaceholder": "صف اللمة التي تبحث عنها...",
+    "nlSearchHint": "اكتب بلغة طبيعية، مثل: لمة هادئة للنساء عن الكتب",
+    "disclaimer": "الردود قد تحتوي على أخطاء. راجع التفاصيل قبل القرار."
+  },
+  "concierge": {
+    "title": "لامّة — مساعدتك الذكية",
+    "subtitle": "اسألني عن أي لمة أو موضوع يهمك",
+    "welcomeTitle": "كيف يمكنني مساعدتك؟",
+    "welcomeSubtitle": "اسألني عن اللمات القادمة، اهتماماتك، أو فلسفة لَمَّة",
+    "inputPlaceholder": "اكتب سؤالك هنا...",
+    "errorFallback": "عذراً، تعذّر الرد حالياً. حاول مرة أخرى.",
+    "navTitle": "المساعد الذكي"
+  },
+  "language": {
+    "ar": "العربية",
+    "en": "English"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "dashboard": "لوحتي",
+    "myApplications": "طلباتي",
+    "switchDemoUser": "تبديل المستخدم التجريبي",
+    "loginTitle": "أهلاً بعودتك",
+    "loginSubtitle": "سجّل دخولك للمتابعة",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "demoPasswordHint": "كلمة المرور لأي مستخدم تجريبي: demo",
+    "orQuickDemo": "أو جرّب كمستخدم تجريبي",
+    "demoUsersTitle": "مستخدمون تجريبيون",
+    "demoUsers": {
+      "user-noura": "نورة",
+      "user-ahmad": "أحمد",
+      "user-sara": "سارة",
+      "user-khaled": "خالد (صاحب)"
+    },
+    "tiers": {
+      "NEWCOMER": "عضو جديد",
+      "REGULAR": "عضو منتظم",
+      "CURATOR": "منسّق",
+      "HOST": "صاحب تجمع"
+    },
+    "errors": {
+      "user-not-found": "البريد الإلكتروني غير مسجّل",
+      "wrong-password": "كلمة المرور غير صحيحة"
+    },
+    "registerTitle": "أنشئ حسابك",
+    "registerSubtitle": "انضم إلى مجتمع لَمَّة",
+    "name": "الاسم الكامل",
+    "interests": "اهتماماتك",
+    "interestsHint": "اختر ٣-٥ اهتمامات",
+    "selectInterests": "اختر الاهتمامات"
+  },
+  "matching": {
+    "forYou": "مخصّصة لك",
+    "recommendedTitle": "لمات نوصي بها لك، {name}",
+    "recommendedSubtitle": "بناءً على اهتماماتك وحضورك السابق، اخترنا لك هذه اللمات.",
+    "yourMatchScore": "نتيجة مطابقتك",
+    "matchScoreHint": "تُحسب بناءً على اهتماماتك وملفك الشخصي.",
+    "matchScorePreview": "نتيجة المطابقة المبدئية",
+    "peopleYouMightKnow": "أشخاص قد تعرفهم",
+    "similarity": "توافق",
+    "meetAtGathering": "أشخاص قد تلتقي بهم",
+    "meetAtGatheringHint": "هؤلاء الأشخاص يشاركونك اهتماماتك وقد يحضرون هذه اللمة",
+    "interests": {
+      "photography": "photography",
+      "art": "art",
+      "books": "books",
+      "music": "music",
+      "food": "food",
+      "culture": "culture",
+      "history": "history",
+      "design": "design",
+      "technology": "technology",
+      "networking": "networking",
+      "poetry": "poetry",
+      "literature": "literature",
+      "painting": "painting",
+      "pottery": "pottery",
+      "marketing": "marketing"
+    },
+    "reasons": {
+      "matching-interest": "يطابق اهتمامك: {interest}",
+      "intimate-size": "حجم حميمي مثالي",
+      "similar-attendees": "{count} من أشخاص مشابهين قد يحضرون",
+      "topic": "موضوع يهمك"
+    },
+    "tabs": {
+      "people": "أشخاص",
+      "gatherings": "لمات"
+    },
+    "page": {
+      "title": "مطابقاتي",
+      "subtitle": "أشخاص يشاركونك الاهتمامات، ولمات قد تهمك",
+      "whyRecommend": "لماذا نوصي بهذه اللمة؟",
+      "sharedInterests": "اهتمامات مشتركة",
+      "previousAttendance": "تقاسم حضر {count} لمات سابقة"
+    }
+  },
+  "dashboard": {
+    "welcome": "أهلاً، {name}",
+    "myApplications": "طلباتي",
+    "upcomingGatherings": "لمات قادمة",
+    "myMatches": "مطابقاتي",
+    "viewAllApplications": "عرض كل الطلبات",
+    "noApplications": "لا توجد طلبات بعد",
+    "browseGatherings": "تصفّح اللمات",
+    "noUpcoming": "لا توجد لمات قادمة",
+    "stats": {
+      "attended": "لمات حضرت",
+      "pending": "طلبات قيد المراجعة",
+      "matches": "مطابقات"
+    },
+    "profile": "الملف الشخصي",
+    "editProfile": "تعديل الملف",
+    "membership": "العضوية",
+    "tier": "المستوى",
+    "points": "نقاط",
+    "nextTier": "المستوى التالي",
+    "badges": "الأوسمة",
+    "interests": "الاهتمامات",
+    "breadcrumbs": "لوحتي",
+    "applicationsTitle": "طلباتي",
+    "applicationsSubtitle": "كل طلباتك إلى اللمات في مكانٍ واحد.",
+    "applicationsEmpty": "لم تقدّم على أي لمة بعد.",
+    "applicationsBrowseCta": "تصفّح اللمات",
+    "statusFilter": {
+      "all": "الكل",
+      "pending": "قيد المراجعة",
+      "approved": "مقبولة",
+      "waitlisted": "قائمة الانتظار",
+      "rejected": "مرفوضة"
+    },
+    "host": {
+      "title": "لوحة الصاحب",
+      "subtitle": "أدر لماتك وطلباتك من هنا.",
+      "onlyHosts": "هذه اللوحة لأصحاب اللمات فقط.",
+      "onlyHostsDesc": "إذا كنت صاحب لمة، سجّل الدخول بحسابك. إن لم تكن، يمكنك التقدّم لتصبح صاحب لمة.",
+      "sidebar": {
+        "gatherings": "لماتي",
+        "applications": "الطلبات",
+        "analytics": "الإحصاءات",
+        "messages": "الرسائل",
+        "newGathering": "لمة جديدة"
+      },
+      "gatherings": {
+        "title": "لماتي",
+        "stats": {
+          "total": "إجمالي اللمات",
+          "upcoming": "قادمة",
+          "completed": "مكتملة",
+          "draft": "مسودّات"
+        },
+        "empty": "لم تنشئ أي لمة بعد.",
+        "createCta": "أنشئ لمتك الأولى",
+        "table": {
+          "title": "العنوان",
+          "date": "التاريخ",
+          "status": "الحالة",
+          "attendees": "الحاضرون",
+          "applications": "الطلبات"
+        }
+      },
+      "applications": {
+        "title": "الطلبات",
+        "subtitle": "راجع طلبات الحضور على لماتك.",
+        "empty": "لا توجد طلبات جديدة.",
+        "applicant": "المتقدّم",
+        "appliedFor": "قدّم على",
+        "motivation": "الدافع",
+        "matchScore": "درجة المطابقة",
+        "actions": "إجراءات",
+        "approve": "قبول",
+        "reject": "رفض",
+        "waitlist": "قائمة الانتظار"
+      },
+      "analytics": {
+        "title": "الإحصاءات",
+        "subtitle": "أداء لماتك خلال آخر ٦ أشهر.",
+        "chart1Title": "الحاضرون شهرياً",
+        "chart2Title": "توزيع اللمات حسب الموضوع",
+        "chart3Title": "معدّل القبول",
+        "chart4Title": "معدّل التقييم"
+      },
+      "messages": {
+        "title": "الرسائل",
+        "comingSoon": "هذا القسم يُبنى في مرحلةٍ قادمة."
+      },
+      "new": {
+        "title": "لمة جديدة",
+        "subtitle": "أنشئ لمتك في خمس خطوات.",
+        "step1": "المعلومات الأساسية",
+        "step2": "الزمان والمكان",
+        "step3": "السعر والسعة",
+        "step4": "الوصف والأسئلة",
+        "step5": "المراجعة والنشر",
+        "next": "التالي",
+        "back": "رجوع",
+        "publish": "انشر اللمة",
+        "fields": {
+          "title": "عنوان اللمة",
+          "titleHint": "عنوانٌ قصيرٌ وجاذب، يلخّص الفكرة.",
+          "topic": "الموضوع",
+          "format": "الصيغة",
+          "startDate": "تاريخ البدء",
+          "endDate": "تاريخ الانتهاء",
+          "venueName": "اسم المكان",
+          "venueAddress": "العنوان",
+          "price": "السعر (د.ك)",
+          "isFree": "مجانية",
+          "capacityMin": "الحد الأدنى للحضور",
+          "capacityMax": "الحد الأقصى للحضور",
+          "description": "الوصف التحريري",
+          "descriptionHint": "٢٠٠–٣٠٠ كلمة. اكتب كما تكتب لصديقٍ يقترح عليه فكرة.",
+          "applicationQuestions": "أسئلة التقديم",
+          "question": "السؤال",
+          "addQuestion": "أضف سؤالاً"
+        }
+      }
+    }
+  },
+  "about": {
+    "heroTitle": "لَمَّة",
+    "heroTagline": "تجمعات حميمية مُنتقاة في الكويت.",
+    "manifesto": "نحن لا نبيع فعاليات. نحن نفتح أبواباً. كل لمةٍ تجمعٍ صغيرٌ حول طاولةٍ أو سجادة، يستضيفه شخصٌ يعرف اسم ضيوفه. لا تذاكر، لا طوابير، لا كاميرات. فقط سؤالٌ واحد، وشايٌ، وزمنٌ بطيء. نؤمن أن المدينة تنطفئ حين تنطفئ لماتها الصغيرة، وأن كل لمةٍ هي فعلُ مقاومةٍ ضدّ المعاملة. نحن لا نريد أن نكبر — نريد أن نعمق.",
+    "principlesTitle": "مبادئ أربعة",
+    "principles": {
+      "intimate": {
+        "title": "حميمية لا تتسع",
+        "desc": "كل لمةٍ لها سقف. حين يمتلئ المكان، يغلق الباب. النوع يسبق الكمّ."
+      },
+      "editorial": {
+        "title": "تحريرية لا تسويقية",
+        "desc": "نختار اللمات كما يختار المحرّر المقالات — بذوقٍ وسؤال، لا بأرقام."
+      },
+      "slow": {
+        "title": "بطيئة لا متسرّعة",
+        "desc": "اللمة تحتاج زمناً. لا ساعة، بل مساء. لا برامج، بل تدفّق."
+      },
+      "prayerAware": {
+        "title": "تراعي الصلاة",
+        "desc": "تنطلق بعد الأذان، لا قبله. الزمن يخضع لإيقاع المدينة لا لإيقاع التقويم."
+      }
+    },
+    "storyTitle": "قصّتنا",
+    "storyBody": "بدأت لَمَّة في شتاء ٢٠٢٥، حين جلس خمسةٌ على سجادةٍ في ديوانيةٍ قديمة، وقرّروا أن الفعاليات في مدينتهم صارت تجارةً لا حواراً. أرادوا لماتٍ صغيرة، يجمعها شخصٌ يعرف ضيوفه، يحضرها من يهتمّ لا من يدفع. كتبوا بيانهم الأول على دفتر، ثم فتحوا أول خمس لمات. اليوم نحن أكثر، لكنّنا ما زلنا صغاراً — ونعرف أسماء بعضنا.",
+    "whyNowTitle": "لماذا الآن؟",
+    "whyNow": [
+      "المدينة تنمو بسرعة، واللمات الصغيرة تختفي بسرعةٍ موازية.",
+      "الفعاليات التجارية صارت بديلاً عن اللقاء، لا جسراً إليه.",
+      "بعد جائحتين، صرنا نعرف أن الحضور الماديّ لا يعوَّض.",
+      "الأصوات الجديدة تحتاج جمهوراً صبوراً، لا جمهوراً كبيراً.",
+      "في زمن السرعة، البطء فعلُ مقاومةٍ — واللمة بطءٌ."
+    ],
+    "personasTitle": "لمن نحن؟",
+    "personas": {
+      "newcomer": {
+        "title": "القادم الجديد",
+        "desc": "وصلت حديثاً إلى الكويت، تبحث عن لماتٍ لا عن فعاليات."
+      },
+      "regular": {
+        "title": "العضو الدائم",
+        "desc": "حضرت لماتٍ سابقة، تريد أن تعمّق لا أن تكرّر."
+      },
+      "curator": {
+        "title": "المنسّق",
+        "desc": "تختار اللمات لغيرك، وتعرف الفرق بين الجيد والأصيل."
+      },
+      "host": {
+        "title": "صاحب اللمة",
+        "desc": "تفتح بيتك أو ديوانيتك، وتعرف أن الضيافة فنّ."
+      }
+    },
+    "ctaTitle": "ابدأ بأول لمة",
+    "ctaButton": "تصفّح اللمات"
+  },
+  "faq": {
+    "title": "أسئلة شائعة",
+    "subtitle": "ما يسأل عنه القادمون الجدد قبل أول لمة.",
+    "categories": {
+      "general": "عام",
+      "application": "التقديم",
+      "hosting": "الاستضافة",
+      "payment": "الدفع",
+      "conduct": "السلوك",
+      "gatherings": "التجمعات والحضور",
+      "hosts": "أصحاب التجمعات",
+      "payments": "المدفوعات والإلغاء",
+      "tech": "التقنية والخصوصية"
+    },
+    "q1": "ما هي لَمَّة؟",
+    "a1": "لَمَّة منصّة كويتية لتجمعاتٍ حميمية مُنتقاة. كل لمةٍ تجمّعٌ صغير (٨–٥٠ شخصاً) يستضيفه شخصٌ يعرف ضيوفه، حول موضوعٍ تحريري محدّد.",
+    "q2": "كيف أشارك في لمة؟",
+    "a2": "اختر لمةً من قائمة اللمات، اقرأ وصفها، ثم قدّم طلبك عبر نموذج التقديم. صاحب اللمة يراجع الطلبات ويقبل من يراه مناسباً.",
+    "q3": "هل لمة مجانية؟",
+    "a3": "بعض اللمات مجانية، وبعضها مدفوع لتغطية تكاليف المواد أو المكان. السعر يُذكر بوضوح في صفحة كل لمة.",
+    "q4": "ما حجم اللمة عادةً؟",
+    "a4": "بين ٨ و٥٠ شخصاً، بحسب الموضوع. لا نتجاوز السقف أبداً — حتى لو طلب المئات.",
+    "q5": "هل يجب أن أحضر بمفردي؟",
+    "a5": "نعم، نوصي بذلك. اللمة فرصة لتعرف وجوهاً جديدة. إن أتيت مع صديق، تجلسان معاً لكنّكما تلتقيان بالآخرين.",
+    "q6": "كم يستغرق التقديم؟",
+    "a6": "نموذج قصير: دافعك للحضور، وإجابةٌ على سؤالٍ أو سؤالين من صاحب اللمة. ٥ دقائق عادةً.",
+    "q7": "متى أعرف نتيجة التقديم؟",
+    "a7": "خلال ٣–٧ أيام عادةً. تصلك رسالة بقبولٍ أو رفضٍ أو قائمة انتظار.",
+    "q8": "هل يمكنني إلغاء طلبي؟",
+    "a8": "نعم، من لوحتك. لكن نرجو عدم الإلغاء بعد القبول إلا لظرفٍ طارئ — المكان محجوز لك.",
+    "q9": "ماذا لو رُفض طلبي؟",
+    "a9": "الرفض ليس شخصياً. صاحب اللمة يختار من يراه الأنسب للموضوع. جرّب لمةً أخرى — هناك لماتٌ كثيرة.",
+    "q10": "كيف أصبح صاحب لمة؟",
+    "a10": "سجّل كصاحب لمة من حسابك، ثم أنشئ لمتك الأولى. ستراجعها لَمَّة قبل النشر.",
+    "q11": "ما الذي يُتوقّع من صاحب اللمة؟",
+    "a11": "أن يستقبل ضيوفه بالاسم، أن يحترم مواعيد الصلاة، أن يكتب وصفاً صادقاً، وأن يراجع الطلبات بنيةٍ حسنة.",
+    "q12": "هل آخذ مالاً مقابل الاستضافة؟",
+    "a12": "إن كانت لمتك مدفوعة، يذهب الجزء الأكبر لتكاليف المواد. لَمَّة تأخذ عمولةً صغيرة لتغطية تشغيل المنصّة.",
+    "q13": "هل يمكنني استضافة لمة في بيتي؟",
+    "a13": "نعم. حدّد ذلك في نموذج إنشاء اللمة، وسيُطلب من الضيوف احترام خصوصية المكان.",
+    "q14": "كيف أدفع؟",
+    "a14": "بعد قبول طلبك، يُطلب منك الدفع إلكترونياً عبر بطاقةٍ مدعومة. لا نقبل الدفع نقداً في الموقع.",
+    "q15": "هل يمكن استرداد المبلغ؟",
+    "a15": "خلال ٤٨ ساعة من الدفع، نعم. بعد ذلك، فقط قبل ٧٢ ساعةٍ من موعد اللمة، ولظرفٍ طارئ.",
+    "q16": "هل تُصدر فواتير؟",
+    "a16": "نعم، تُرسل الفاتورة إلى بريدك إلكترونياً بعد الدفع.",
+    "q17": "ما ميثاق السلوك؟",
+    "a17": "نلتزم بآداب الحوار: لا مقاطعة، لا تصعيد، لا تداول أموالٍ أو بطاقاتٍ في اللمة. اللمة للحوار، لا للتجارة.",
+    "q18": "ماذا يحدث لو خالف أحدٌ الميثاق؟",
+    "a18": "صاحب اللمة يحقّ له إنهاء اللمة. لَمَّة قد تمنع المخالف من الحضور مستقبلاً.",
+    "q19": "هل اللمة مناسبة لجميع الأعمار؟",
+    "a19": "بعض اللمات عائلية (مثل لمات الأبراج)، وبعضها للبالغين فقط. يُذكر ذلك بوضوح في صفحة كل لمة.",
+    "q20": "كيف أتواصل معكم؟",
+    "a20": "عبر hello@lamma.kw أو رسالة مباشرة على إنستغرام @lamma.kw. نردّ خلال ٤٨ ساعة.",
+    "ctaTitle": "لم تجد إجابتك؟",
+    "ctaButton": "راسلنا",
+    "notFound": "لم تجد إجابتك؟",
+    "contactCta": "تواصل معنا",
+    "breadcrumbs": "أسئلة شائعة"
+  },
+  "notFound": {
+    "title": "ضللت الطريق",
+    "description": "هذه الصفحة غير موجودة. ربما انتقلت، أو ربما لم تكن يوماً. عُد إلى اللمات.",
+    "cta": "تصفّح اللمات",
+    "home": "العودة للرئيسية"
+  },
+  "application": {
+    "form": {
+      "title": "نموذج التقديم",
+      "subtitle": "أخبرنا عنك. صاحب اللمة سيقرأ ما تكتب.",
+      "step1": "الدافع",
+      "step2": "أسئلة صاحب اللمة",
+      "step3": "إقرار",
+      "motivation": "لماذا تريد الحضور؟",
+      "motivationHint": "٥٠ كلمة على الأقل. صاحب اللمة يريد أن يفهم لماذا أنت.",
+      "customQuestion": "سؤال من صاحب اللمة",
+      "declaration": "إقرار",
+      "declarationText": "أقرّ بأنّ المعلومات صحيحة، وأنني سأحترم ميثاق السلوك إن قُبل طلبي.",
+      "submit": "أرسل الطلب",
+      "next": "التالي",
+      "back": "رجوع"
+    },
+    "success": {
+      "title": "وصلنا طلبك",
+      "message": "سنراجع طلبك ونردّ خلال ٣–٧ أيام. ستجد التحديثات في لوحتك.",
+      "timeline": {
+        "submitted": "تم الإرسال",
+        "submittedDesc": "وصلنا طلبك بنجاح.",
+        "review": "قيد المراجعة",
+        "reviewDesc": "صاحب اللمة يقرأ طلبك الآن.",
+        "decision": "القرار",
+        "decisionDesc": "ستصلك رسالة بالقبول أو الرفض."
+      },
+      "viewApplication": "عرض الطلب",
+      "browseMore": "تصفّح لماتٍ أخرى"
+    },
+    "card": {
+      "appliedFor": "قدّم على",
+      "appliedOn": "في",
+      "viewDetails": "عرض التفاصيل"
+    }
+  },
+  "hostDetail": {
+    "stats": {
+      "gatherings": "لمة استضافها",
+      "attendees": "ضيف",
+      "rating": "التقييم",
+      "responseTime": "يستجيب خلال"
+    }
+  },
+  "breadcrumbs": {
+    "home": "الرئيسية"
+  },
+  "host": {
+    "notHostTitle": "هذه الصفحة لأصحاب التجمعات",
+    "notHostDescription": "حسابك غير مرتبطٍ بصفحة صاحب تجمع.",
+    "backToDashboard": "العودة للوحة المستخدم",
+    "demoHint": "للتجربة، سجّل الدخول كـ خالد (صاحب)",
+    "hostingAs": "تستضيف كـ",
+    "verified": "موثّق",
+    "nav": {
+      "userDashboard": "لوحة المستخدم",
+      "gatherings": "تجمعاتي",
+      "applications": "الطلبات",
+      "analytics": "الإحصاءات",
+      "messages": "الرسائل",
+      "newGathering": "لمة جديدة"
+    },
+    "gatherings": {
+      "title": "تجمعاتي",
+      "filters": {
+        "all": "الكل",
+        "upcoming": "قادمة",
+        "past": "سابقة",
+        "draft": "مسودة"
+      },
+      "applications": "طلبات",
+      "approved": "مقبولة",
+      "fill": "نسبة الملء",
+      "viewApplications": "عرض الطلبات",
+      "viewPublicPage": "الصفحة العامة",
+      "empty": "لا توجد لمات بعد",
+      "emptyCta": "أنشئ لمة جديدة",
+      "draft": "مسودة"
+    },
+    "applications": {
+      "title": "الطلبات",
+      "filterByGathering": "حسب اللمة",
+      "allGatherings": "كل اللمات",
+      "aiMatchScore": "نتيجة المطابقة الذكية",
+      "matchHigh": "توافق عالٍ",
+      "matchMedium": "توافق متوسط",
+      "matchLow": "توافق منخفض",
+      "motivation": "الدافع",
+      "forGathering": "للمة",
+      "submittedAgo": "قُدّم {time}",
+      "viewDetails": "عرض التفاصيل",
+      "approve": "قبول",
+      "reject": "رفض",
+      "waitlist": "قائمة",
+      "empty": "لا توجد طلبات",
+      "actions": {
+        "approved": {
+          "title": "تم قبول الطلب",
+          "description": "سيتم إشعار {name}"
+        },
+        "rejected": {
+          "title": "تم رفض الطلب",
+          "description": "سيتم إشعار {name}"
+        },
+        "waitlisted": {
+          "title": "أُضيف لقائمة الانتظار",
+          "description": "{name} سينتظر"
+        }
+      }
+    },
+    "analytics": {
+      "title": "الإحصاءات",
+      "totalGatherings": "لمات",
+      "totalApplications": "طلبات",
+      "totalApproved": "مقبولة",
+      "avgRating": "متوسط التقييم",
+      "applicationsOverTime": "الطلبات عبر الزمن",
+      "acceptanceRate": "نسبة القبول",
+      "topGatherings": "أفضل اللمات",
+      "matchScoreDistribution": "توزيع المطابقة",
+      "last6Months": "آخر ٦ أشهر"
+    },
+    "messages": {
+      "title": "الرسائل",
+      "comingSoon": "قريباً",
+      "backToApplications": "العودة للطلبات",
+      "subtitle": "تواصل مباشر مع المتقدمين",
+      "conversations": "المحادثات",
+      "empty": "لا توجد محادثات",
+      "selectConversation": "اختر محادثة",
+      "messagePlaceholder": "اكتب رسالة..."
+    },
+    "newGathering": {
+      "title": "لمة جديدة",
+      "steps": {
+        "1": "الأساسيات",
+        "2": "التوقيت والمكان",
+        "3": "السعة والسعر",
+        "4": "المحتوى",
+        "5": "مراجعة وإنشاء"
+      },
+      "titleAr": "العنوان (عربي)",
+      "titleEn": "العنوان (إنجليزي)",
+      "topic": "الموضوع",
+      "format": "الصيغة",
+      "coverImage": "رابط صورة الغلاف",
+      "startDate": "تاريخ البداية",
+      "endDate": "تاريخ النهاية",
+      "prayerAware": "محترم للصلاة",
+      "venueName": "اسم المكان",
+      "venueAddress": "العنوان",
+      "hideLocation": "إخفاء الموقع",
+      "capacityMin": "الحد الأدنى",
+      "capacityMax": "الحد الأقصى",
+      "price": "السعر",
+      "isFree": "مجاني",
+      "applicationsOpen": "فتح التقديم",
+      "applicationsClose": "إغلاق التقديم",
+      "description": "الوصف",
+      "applicationQuestions": "أسئلة مخصصة",
+      "addQuestion": "أضف سؤالاً",
+      "declaration": "أتحمّل مسؤولية محتوى اللمة",
+      "submit": "إنشاء (مسودة)",
+      "successTitle": "تم إنشاء اللمة",
+      "successDescription": "محفوظة كمسودة"
+    }
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "markAllRead": "تعليم الكل كمقروء",
+    "empty": "لا توجد إشعارات",
+    "viewAll": "عرض الكل",
+    "subtitle": "{count} إشعار غير مقروء",
+    "enableBrowserTitle": "تفعيل إشعارات المتصفح",
+    "enableBrowserSubtitle": "احصل على إشعارات فورية للطلبات الجديدة",
+    "enableBrowser": "تفعيل",
+    "enabled": "تم التفعيل!",
+    "enabledBody": "ستصلك الإشعارات الآن",
+    "filters": {
+      "all": "الكل",
+      "unread": "غير مقروء"
+    }
+  },
+  "applications": {
+    "title": "طلباتي",
+    "matchScore": "نتيجة المطابقة",
+    "submittedAt": "قُدّم في {date}",
+    "empty": "لا توجد طلبات",
+    "cancelApplication": "إلغاء",
+    "cancelSuccess": "تم الإلغاء",
+    "breadcrumbs": "طلباتي"
+  },
+  "application_form": {
+    "title": "تقديم طلب",
+    "subtitle": "أجب بصدق",
+    "steps": {
+      "1": "نبذة",
+      "2": "أسئلة",
+      "3": "تفاصيل",
+      "4": "مراجعة"
+    },
+    "motivation": "لماذا تريد الحضور؟",
+    "motivationHint": "اكتب بصدق",
+    "motivationCounter": "{count}/50",
+    "background": "الخلفية",
+    "backgroundHint": "اختياري",
+    "declaration": "أُؤلّد أن المعلومات صحيحة",
+    "submit": "إرسال",
+    "next": "التالي",
+    "previous": "السابق",
+    "summary": "ملخص",
+    "errors": {
+      "motivation-too-short": "50 حرف على الأقل",
+      "declaration-required": "مطلوب"
+    }
+  },
+  "live": {
+    "backToGathering": "العودة لللمة",
+    "live": "مباشر",
+    "connecting": "جارٍ الاتصال...",
+    "hereNow": "هنا الآن",
+    "chat": "المحادثة",
+    "moments": "لحظات",
+    "attendees": "الحاضرون",
+    "messagePlaceholder": "اكتب رسالة...",
+    "typing": "يكتب...",
+    "addHighlight": "أضف لحظة مميزة",
+    "addQuote": "أضف اقتباساً",
+    "noMomentsYet": "لا توجد لحظات بعد. كن أول من يضيف!",
+    "whosHere": "من هنا الآن",
+    "host": "صاحب التجمع",
+    "joinedAgo": "انضم قبل {time} دقيقة",
+    "attendeesCount": "{count} حاضر",
+    "prayerReminder": "تذكير الصلاة",
+    "prayerReminderHint": "سنذكّرك قبل 10 دقائق من كل صلاة",
+    "enterLiveNow": "ادخل اللمة المباشرة",
+    "enterLiveEarly": "ادخل مبكراً",
+    "tryLiveDemo": "تجربة الرفيق اللحظي"
+  },
+  "pwa": {
+    "installTitle": "ثبّت لَمَّة",
+    "installSubtitle": "وصول أسرع من شاشتك الرئيسية",
+    "install": "تثبيت",
+    "dismiss": "إغلاق"
+  }
+}

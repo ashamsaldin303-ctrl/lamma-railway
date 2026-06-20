@@ -1,0 +1,15 @@
+{
+  "name": "lamma-live-companion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "bun --hot index.ts",
+    "start": "bun index.ts"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/socket.io": "^3.0.0"
+  }
+}

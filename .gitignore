@@ -1,0 +1,68 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files — keep .env.example tracked, ignore real secrets
+.env
+.env.local
+.env.*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+local-*
+
+# local database (SQLite) — created by `bun run db:push`
+db/*.db
+db/*.db-journal
+
+# agent / build artifacts (internal)
+.claude
+.z-ai-config
+*.log
+dev.log
+dev.out.log
+server.log
+worklog.md
+test
+prompt
+
+# Skills directory (sandbox-only skill sources, not part of the app)
+/skills/
+
+# Sandbox-only files
+.zscripts/
+examples/
+tool-results/
+upload/
+download/
+reference/

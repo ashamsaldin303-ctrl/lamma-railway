@@ -1,0 +1,828 @@
+{
+  "meta": {
+    "title": "Lamma — Intimate Kuwaiti Gatherings",
+    "description": "A Kuwaiti platform for curated intimate gatherings. We treat gatherings as conversation, not transaction.",
+    "localeName": "English",
+    "localeSwitchTo": "العربية"
+  },
+  "nav": {
+    "gatherings": "Gatherings",
+    "hosts": "Hosts",
+    "topics": "Topics",
+    "letters": "Letters",
+    "account": "Account",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLocale": "Switch language",
+    "concierge": "AI Concierge"
+  },
+  "footer": {
+    "titles": {
+      "about": "About Lamma",
+      "help": "Help",
+      "contact": "Contact"
+    },
+    "about": {
+      "story": "Our story",
+      "manifesto": "Manifesto",
+      "team": "Team"
+    },
+    "help": {
+      "faq": "FAQ",
+      "apply": "How to join",
+      "host": "Become a host",
+      "conduct": "Code of conduct"
+    },
+    "contact": {
+      "email": "hello@lamma.kw",
+      "instagram": "Instagram",
+      "x": "X"
+    },
+    "rights": "© 2026 Lamma. Made with care in Kuwait."
+  },
+  "hero": {
+    "eyebrow": "A letter from Lamma",
+    "readFullLetter": "Read the full letter",
+    "byAuthor": "By",
+    "featuredGathering": "Featured gathering",
+    "applyNow": "Apply now",
+    "viewGathering": "Gathering details"
+  },
+  "sections": {
+    "upcomingGatherings": "Upcoming gatherings",
+    "upcomingGatheringsHint": "Applications are open now",
+    "hosts": "Gathering hosts",
+    "hostsHint": "Those who bring us together",
+    "topics": "Editorial topics",
+    "topicsHint": "Six threads that every gathering is woven around",
+    "letters": "Letters from Lamma",
+    "lettersHint": "What is written after a gathering disperses",
+    "newsletter": "Lamma newsletter",
+    "newsletterTitle": "One letter a month. No noise.",
+    "newsletterDesc": "We tell you about upcoming gatherings and one editorial essay worth reading. No ads, no spam.",
+    "newsletterPlaceholder": "Your email",
+    "newsletterSubscribe": "Subscribe",
+    "newsletterSuccess": "Thank you. The next letter will reach you soon."
+  },
+  "gatherings": {
+    "capacity": "Capacity",
+    "seatsFilled": "seat filled",
+    "seatsFilled_plural": "seats filled",
+    "of": "of",
+    "free": "Free",
+    "priceFrom": "From",
+    "kwd": "KWD",
+    "applicationDeadline": "Applications close",
+    "startsAt": "Starts",
+    "viewAll": "All gatherings",
+    "viewGathering": "Gathering details",
+    "prayerAware": "Prayer-aware",
+    "prayerAwareDesc": "This gathering begins right after Isha prayer",
+    "breadcrumbs": "Gatherings",
+    "listingTitle": "Upcoming gatherings",
+    "listingSubtitle": "Applications are open. Each gathering is hand-curated as an experience, not an event.",
+    "aboutThisGathering": "About this gathering",
+    "whoShouldAttend": "Who should attend?",
+    "whatToExpect": "What to expect",
+    "gallery": "Gallery",
+    "relatedGatherings": "Other gatherings you may like",
+    "applyNow": "Apply now",
+    "applicationsClosed": "Applications closed",
+    "applicationOpens": "Applications open",
+    "applicationCloses": "Applications close",
+    "hostedBy": "Hosted by",
+    "venue": "Venue",
+    "format": "Format",
+    "capacityInfo": "{filled} of {total} seats",
+    "venueNotes": "Venue notes",
+    "applicationCta": "Apply for this gathering",
+    "applyNote": "Applying does not guarantee attendance",
+    "applicationsCloseIn": "Applications close {time}",
+    "alreadyApplied": "You've already applied",
+    "applicationId": "Application ID",
+    "currentStatus": "Current status",
+    "viewInDashboard": "View in dashboard",
+    "closed": "Closed",
+    "loginToApply": "Log in to apply",
+    "fullyBooked": "Fully booked",
+    "locationHidden": "Address revealed after approval",
+    "mapPreview": "Map preview",
+    "approved": "Approved",
+    "pending": "Pending",
+    "waitlisted": "Waitlisted",
+    "applyCta": "Apply to join",
+    "price": "Price",
+    "location": "Location",
+    "related": "Related gatherings"
+  },
+  "hosts": {
+    "verified": "Verified",
+    "gatheringsHosted": "gatherings hosted",
+    "totalAttendees": "attendees",
+    "avgRating": "Rating",
+    "responseTime": "Responds within",
+    "hours": "hours",
+    "viewProfile": "Full profile",
+    "breadcrumbs": "Hosts",
+    "listingTitle": "Lamma hosts",
+    "listingSubtitle": "Five who gather us — a historian, a photographer, a chef, a poet, a critic. Each opens their door differently.",
+    "upcomingGatherings": "Upcoming gatherings",
+    "pastGatherings": "Past gatherings",
+    "hostLetters": "Host's letters",
+    "stats": "Stats",
+    "specialties": "Specialties",
+    "bio": "Bio",
+    "gatheringsHostedCount": "{count} gatherings",
+    "attendeesCount": "{count} attendees"
+  },
+  "topics": {
+    "explore": "Explore topic",
+    "gatheringsUnder": "gatherings under this topic",
+    "breadcrumbs": "Topics",
+    "listingTitle": "Editorial topics",
+    "listingSubtitle": "Six threads that every gathering is woven around. Pick yours, or let one pick you.",
+    "gatheringsCount": "gatherings",
+    "lettersCount": "letters",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "letters": "Letters",
+    "noGatherings": "No gatherings under this topic yet.",
+    "noLetters": "No letters under this topic yet.",
+    "topicHero": "Topic"
+  },
+  "letters": {
+    "readMore": "Continue reading",
+    "readTime": "minutes read",
+    "minRead": "min read",
+    "publishedOn": "Published on",
+    "byAuthor": "By",
+    "breadcrumbs": "Letters",
+    "listingTitle": "Letters from Lamma",
+    "listingSubtitle": "What is written after a gathering disperses. Each letter is a slow testimony to a night or a place.",
+    "featured": "Featured letter",
+    "moreLetters": "More letters",
+    "aiSummaryLabel": "AI summary",
+    "moreLettersTitle": "Read next",
+    "title": "Letters from Lamma",
+    "subtitle": "Stories told after every gathering",
+    "description": "Every gathering leaves a trace, and these letters preserve it.",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "aboutAuthor": "About the author"
+  },
+  "prayer": {
+    "label": "Prayer times",
+    "next": "Next prayer",
+    "in": "in",
+    "fajr": "Fajr",
+    "sunrise": "Sunrise",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "awareNote": "This gathering observes prayer times"
+  },
+  "formats": {
+    "MEN_ONLY": "Men only",
+    "WOMEN_ONLY": "Women only",
+    "FAMILY": "Family",
+    "MIXED": "Mixed"
+  },
+  "membership": {
+    "NEWCOMER": "Newcomer",
+    "REGULAR": "Regular",
+    "CURATOR": "Curator",
+    "HOST": "Host"
+  },
+  "application_status": {
+    "PENDING": "Under review",
+    "APPROVED": "Approved",
+    "REJECTED": "Declined",
+    "WAITLISTED": "Waitlisted",
+    "CANCELLED": "Cancelled",
+    "ATTENDED": "Attended",
+    "NO_SHOW": "No-show",
+    "DRAFT": "Draft",
+    "PUBLISHED": "Published",
+    "APPLICATIONS_OPEN": "Applications open",
+    "APPLICATIONS_CLOSED": "Applications closed",
+    "IN_PROGRESS": "In progress",
+    "COMPLETED": "Completed"
+  },
+  "status": {
+    "DRAFT": "Draft",
+    "PUBLISHED": "Published",
+    "APPLICATIONS_OPEN": "Applications open",
+    "APPLICATIONS_CLOSED": "Applications closed",
+    "IN_PROGRESS": "In progress",
+    "COMPLETED": "Completed",
+    "CANCELLED": "Cancelled"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "back": "Back",
+    "more": "More",
+    "soon": "Soon",
+    "placeholder": "This section is built in a later phase"
+  },
+  "ai": {
+    "poweredBy": "AI-powered",
+    "generating": "Generating...",
+    "done": "Done",
+    "aiSummary": "AI summary",
+    "aiInsight": "AI insight",
+    "summarizing": "Summarizing article...",
+    "analyzingApplicant": "Analyzing applicant...",
+    "enhanceDescription": "Enhance with AI",
+    "suggestQuestions": "Suggest questions",
+    "nlSearchPlaceholder": "Describe the gathering you're looking for...",
+    "nlSearchHint": "Write naturally, e.g.: quiet book gathering for women",
+    "disclaimer": "Responses may contain errors. Verify details before deciding."
+  },
+  "concierge": {
+    "title": "Lamma — Your AI assistant",
+    "subtitle": "Ask me about any gathering or topic",
+    "welcomeTitle": "How can I help you?",
+    "welcomeSubtitle": "Ask me about upcoming gatherings, your interests, or Lamma's philosophy",
+    "inputPlaceholder": "Type your question...",
+    "errorFallback": "Sorry, couldn't respond right now. Try again.",
+    "navTitle": "AI Concierge"
+  },
+  "language": {
+    "ar": "العربية",
+    "en": "English"
+  },
+  "auth": {
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "dashboard": "My dashboard",
+    "myApplications": "My applications",
+    "switchDemoUser": "Switch demo user",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Sign in to continue",
+    "email": "Email",
+    "password": "Password",
+    "demoPasswordHint": "Demo password for all users: demo",
+    "orQuickDemo": "Or try as a demo user",
+    "demoUsersTitle": "Demo users",
+    "demoUsers": {
+      "user-noura": "Noura",
+      "user-ahmad": "Ahmad",
+      "user-sara": "Sara",
+      "user-khaled": "Khaled (Host)"
+    },
+    "tiers": {
+      "NEWCOMER": "Newcomer",
+      "REGULAR": "Regular",
+      "CURATOR": "Curator",
+      "HOST": "Host"
+    },
+    "errors": {
+      "user-not-found": "Email not registered",
+      "wrong-password": "Wrong password"
+    },
+    "registerTitle": "Create your account",
+    "registerSubtitle": "Join the Lamma community",
+    "name": "Full name",
+    "interests": "Your interests",
+    "interestsHint": "Pick 3-5 interests",
+    "selectInterests": "Select interests"
+  },
+  "matching": {
+    "forYou": "For you",
+    "recommendedTitle": "Gatherings we recommend for you, {name}",
+    "recommendedSubtitle": "Based on your interests and past attendance, we picked these for you.",
+    "yourMatchScore": "Your match score",
+    "matchScoreHint": "Calculated from your interests and profile.",
+    "matchScorePreview": "Preliminary match score",
+    "peopleYouMightKnow": "People you might know",
+    "similarity": "match",
+    "meetAtGathering": "People you might meet",
+    "meetAtGatheringHint": "These people share your interests and might attend this gathering",
+    "interests": {
+      "photography": "Photography",
+      "art": "Art",
+      "books": "Books",
+      "music": "Music",
+      "food": "Food",
+      "culture": "Culture",
+      "history": "History",
+      "design": "Design",
+      "technology": "Technology",
+      "networking": "Networking",
+      "poetry": "Poetry",
+      "literature": "Literature",
+      "painting": "Painting",
+      "pottery": "Pottery",
+      "marketing": "Marketing"
+    },
+    "reasons": {
+      "matching-interest": "Matches your interest: {interest}",
+      "intimate-size": "Perfect intimate size",
+      "similar-attendees": "{count} similar people might attend",
+      "topic": "A topic you'd love"
+    },
+    "tabs": {
+      "people": "People",
+      "gatherings": "Gatherings"
+    },
+    "page": {
+      "title": "My matches",
+      "subtitle": "People who share your interests, and gatherings you would love",
+      "whyRecommend": "Why we recommend this",
+      "sharedInterests": "Shared interests",
+      "previousAttendance": "Previously attended {count} gatherings"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome, {name}",
+    "myApplications": "My applications",
+    "upcomingGatherings": "Upcoming gatherings",
+    "myMatches": "My matches",
+    "viewAllApplications": "View all applications",
+    "noApplications": "No applications yet",
+    "browseGatherings": "Browse gatherings",
+    "noUpcoming": "No upcoming gatherings",
+    "stats": {
+      "attended": "Gatherings attended",
+      "pending": "Pending applications",
+      "matches": "Matches"
+    },
+    "profile": "Profile",
+    "editProfile": "Edit profile",
+    "membership": "Membership",
+    "tier": "Tier",
+    "points": "Points",
+    "nextTier": "Next tier",
+    "badges": "Badges",
+    "interests": "Interests",
+    "breadcrumbs": "My dashboard",
+    "applicationsTitle": "My applications",
+    "applicationsSubtitle": "All your gathering applications in one place.",
+    "applicationsEmpty": "You haven't applied to any gathering yet.",
+    "applicationsBrowseCta": "Browse gatherings",
+    "statusFilter": {
+      "all": "All",
+      "pending": "Pending",
+      "approved": "Approved",
+      "waitlisted": "Waitlisted",
+      "rejected": "Declined"
+    },
+    "host": {
+      "title": "Host dashboard",
+      "subtitle": "Manage your gatherings and applications here.",
+      "onlyHosts": "This dashboard is for hosts only.",
+      "onlyHostsDesc": "If you're a host, sign in with your account. If not, you can apply to become one.",
+      "sidebar": {
+        "gatherings": "My gatherings",
+        "applications": "Applications",
+        "analytics": "Analytics",
+        "messages": "Messages",
+        "newGathering": "New gathering"
+      },
+      "gatherings": {
+        "title": "My gatherings",
+        "stats": {
+          "total": "Total gatherings",
+          "upcoming": "Upcoming",
+          "completed": "Completed",
+          "draft": "Drafts"
+        },
+        "empty": "You haven't created any gathering yet.",
+        "createCta": "Create your first gathering",
+        "table": {
+          "title": "Title",
+          "date": "Date",
+          "status": "Status",
+          "attendees": "Attendees",
+          "applications": "Applications"
+        }
+      },
+      "applications": {
+        "title": "Applications",
+        "subtitle": "Review attendance applications for your gatherings.",
+        "empty": "No new applications.",
+        "applicant": "Applicant",
+        "appliedFor": "Applied for",
+        "motivation": "Motivation",
+        "matchScore": "Match score",
+        "actions": "Actions",
+        "approve": "Approve",
+        "reject": "Decline",
+        "waitlist": "Waitlist"
+      },
+      "analytics": {
+        "title": "Analytics",
+        "subtitle": "Your gatherings' performance over the last 6 months.",
+        "chart1Title": "Monthly attendees",
+        "chart2Title": "Gatherings by topic",
+        "chart3Title": "Acceptance rate",
+        "chart4Title": "Average rating"
+      },
+      "messages": {
+        "title": "Messages",
+        "comingSoon": "This section is being built."
+      },
+      "new": {
+        "title": "New gathering",
+        "subtitle": "Create your gathering in five steps.",
+        "step1": "Basic information",
+        "step2": "Time and venue",
+        "step3": "Price and capacity",
+        "step4": "Description and questions",
+        "step5": "Review and publish",
+        "next": "Next",
+        "back": "Back",
+        "publish": "Publish gathering",
+        "fields": {
+          "title": "Gathering title",
+          "titleHint": "A short, inviting title that captures the idea.",
+          "topic": "Topic",
+          "format": "Format",
+          "startDate": "Start date",
+          "endDate": "End date",
+          "venueName": "Venue name",
+          "venueAddress": "Address",
+          "price": "Price (KWD)",
+          "isFree": "Free",
+          "capacityMin": "Minimum capacity",
+          "capacityMax": "Maximum capacity",
+          "description": "Editorial description",
+          "descriptionHint": "200–300 words. Write as you would to a friend you're pitching an idea to.",
+          "applicationQuestions": "Application questions",
+          "question": "Question",
+          "addQuestion": "Add a question"
+        }
+      }
+    }
+  },
+  "about": {
+    "heroTitle": "Lamma",
+    "heroTagline": "Curated intimate gatherings in Kuwait.",
+    "manifesto": "We do not sell events. We open doors. Every gathering is a small circle around a table or a rug, hosted by someone who knows their guests' names. No tickets, no queues, no cameras. Only a question, tea, and slow time. We believe a city dies when its small gatherings die, and that every gathering is an act of resistance against transaction. We do not want to grow — we want to deepen.",
+    "principlesTitle": "Four principles",
+    "principles": {
+      "intimate": {
+        "title": "Intimate, not scalable",
+        "desc": "Every gathering has a ceiling. When the room is full, the door closes. Quality precedes quantity."
+      },
+      "editorial": {
+        "title": "Editorial, not promotional",
+        "desc": "We curate gatherings the way an editor curates essays — with taste and a question, not numbers."
+      },
+      "slow": {
+        "title": "Slow, not rushed",
+        "desc": "A gathering needs time. Not an hour, but an evening. Not a programme, but a flow."
+      },
+      "prayerAware": {
+        "title": "Prayer-aware",
+        "desc": "It begins after the call to prayer, not before. Time bends to the city's rhythm, not the calendar's."
+      }
+    },
+    "storyTitle": "Our story",
+    "storyBody": "Lamma began in the winter of 2025, when five people sat on a rug in an old diwaniya and decided that gatherings in their city had become commerce, not conversation. They wanted small gatherings, hosted by someone who knew their guests, attended by those who cared, not those who paid. They wrote their first manifesto in a notebook, then opened the first five gatherings. Today we are more, but still small — and we know each other's names.",
+    "whyNowTitle": "Why now?",
+    "whyNow": [
+      "The city is growing fast, and small gatherings are disappearing just as fast.",
+      "Commercial events have become a substitute for meeting, not a bridge to it.",
+      "After two pandemics, we know that physical presence is irreplaceable.",
+      "New voices need a patient audience, not a large one.",
+      "In an age of speed, slowness is resistance — and Lamma is slow."
+    ],
+    "personasTitle": "Who is Lamma for?",
+    "personas": {
+      "newcomer": {
+        "title": "The newcomer",
+        "desc": "Recently arrived in Kuwait, looking for gatherings, not events."
+      },
+      "regular": {
+        "title": "The regular",
+        "desc": "Has attended gatherings before, wants to deepen, not repeat."
+      },
+      "curator": {
+        "title": "The curator",
+        "desc": "Chooses gatherings for others, and knows the difference between good and authentic."
+      },
+      "host": {
+        "title": "The host",
+        "desc": "Opens their home or diwaniya, and knows that hospitality is an art."
+      }
+    },
+    "ctaTitle": "Start with your first gathering",
+    "ctaButton": "Browse gatherings"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "What newcomers ask before their first gathering.",
+    "categories": {
+      "general": "General",
+      "application": "Application",
+      "hosting": "Hosting",
+      "payment": "Payment",
+      "conduct": "Conduct",
+      "gatherings": "Gatherings & attendance",
+      "hosts": "Hosts",
+      "payments": "Payments & cancellation",
+      "tech": "Technology & privacy"
+    },
+    "q1": "What is Lamma?",
+    "a1": "Lamma is a Kuwaiti platform for curated intimate gatherings. Every gathering is a small circle (8–50 people) hosted by someone who knows their guests, around a specific editorial topic.",
+    "q2": "How do I join a gathering?",
+    "a2": "Pick a gathering from the listings, read its description, then submit an application via the application form. The host reviews applications and accepts those they find suitable.",
+    "q3": "Is Lamma free?",
+    "a3": "Some gatherings are free, others are paid to cover materials or venue. The price is clearly stated on each gathering's page.",
+    "q4": "How large is a typical gathering?",
+    "a4": "Between 8 and 50 people, depending on the topic. We never exceed the ceiling — even if hundreds ask.",
+    "q5": "Should I come alone?",
+    "a5": "Yes, we recommend it. A gathering is a chance to meet new faces. If you bring a friend, sit together but meet the others.",
+    "q6": "How long does the application take?",
+    "a6": "A short form: your motivation, and one or two questions from the host. About 5 minutes usually.",
+    "q7": "When do I hear back?",
+    "a7": "Usually within 3–7 days. You'll receive a message with an approval, decline, or waitlist.",
+    "q8": "Can I cancel my application?",
+    "a8": "Yes, from your dashboard. But please don't cancel after acceptance unless it's an emergency — the seat was held for you.",
+    "q9": "What if my application is declined?",
+    "a9": "Decline is not personal. The host picks those they find most suited to the topic. Try another gathering — there are many.",
+    "q10": "How do I become a host?",
+    "a10": "Register as a host from your account, then create your first gathering. Lamma will review it before publishing.",
+    "q11": "What is expected of a host?",
+    "a11": "To welcome guests by name, to respect prayer times, to write an honest description, and to review applications in good faith.",
+    "q12": "Do I get paid for hosting?",
+    "a12": "If your gathering is paid, most of the fee covers materials. Lamma takes a small commission to cover platform operations.",
+    "q13": "Can I host at home?",
+    "a13": "Yes. Specify this when creating the gathering, and guests will be asked to respect the privacy of the venue.",
+    "q14": "How do I pay?",
+    "a14": "After your application is accepted, you'll be asked to pay electronically with a supported card. We don't accept cash at the venue.",
+    "q15": "Can I get a refund?",
+    "a15": "Within 48 hours of payment, yes. After that, only up to 72 hours before the gathering, and only for an emergency.",
+    "q16": "Do you issue invoices?",
+    "a16": "Yes, an invoice is sent to your email after payment.",
+    "q17": "What is the code of conduct?",
+    "a17": "We observe conversational ethics: no interrupting, no escalation, no exchange of money or cards at the gathering. The gathering is for conversation, not commerce.",
+    "q18": "What happens if someone breaches the code?",
+    "a18": "The host may end the gathering. Lamma may ban the offender from future attendance.",
+    "q19": "Is Lamma suitable for all ages?",
+    "a19": "Some gatherings are family-friendly (like the Towers gathering), others are adults only. This is clearly stated on each gathering's page.",
+    "q20": "How do I contact you?",
+    "a20": "Via hello@lamma.kw or a direct message on Instagram @lamma.kw. We reply within 48 hours.",
+    "ctaTitle": "Didn't find your answer?",
+    "ctaButton": "Contact us",
+    "notFound": "Didn't find your answer?",
+    "contactCta": "Contact us",
+    "breadcrumbs": "FAQ"
+  },
+  "notFound": {
+    "title": "You've lost your way",
+    "description": "This page doesn't exist. Perhaps it moved, or perhaps it never was. Return to the gatherings.",
+    "cta": "Browse gatherings",
+    "home": "Back to home"
+  },
+  "application": {
+    "form": {
+      "title": "Application form",
+      "subtitle": "Tell us about yourself. The host will read what you write.",
+      "step1": "Motivation",
+      "step2": "Host questions",
+      "step3": "Declaration",
+      "motivation": "Why do you want to attend?",
+      "motivationHint": "At least 50 words. The host wants to understand why you.",
+      "customQuestion": "Question from the host",
+      "declaration": "Declaration",
+      "declarationText": "I confirm the information is true, and that I will respect the code of conduct if accepted.",
+      "submit": "Submit application",
+      "next": "Next",
+      "back": "Back"
+    },
+    "success": {
+      "title": "We received your application",
+      "message": "We'll review your application and reply within 3–7 days. You'll find updates in your dashboard.",
+      "timeline": {
+        "submitted": "Submitted",
+        "submittedDesc": "Your application reached us successfully.",
+        "review": "Under review",
+        "reviewDesc": "The host is reading your application now.",
+        "decision": "Decision",
+        "decisionDesc": "You'll receive a message with the decision."
+      },
+      "viewApplication": "View application",
+      "browseMore": "Browse more gatherings"
+    },
+    "card": {
+      "appliedFor": "Applied for",
+      "appliedOn": "on",
+      "viewDetails": "View details"
+    }
+  },
+  "hostDetail": {
+    "stats": {
+      "gatherings": "gatherings hosted",
+      "attendees": "attendees",
+      "rating": "rating",
+      "responseTime": "responds within"
+    }
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  },
+  "host": {
+    "notHostTitle": "This page is for hosts only",
+    "notHostDescription": "Your account is not linked to a host profile.",
+    "backToDashboard": "Back to user dashboard",
+    "demoHint": "For demo, log in as Khaled (Host)",
+    "hostingAs": "Hosting as",
+    "verified": "Verified",
+    "nav": {
+      "userDashboard": "User dashboard",
+      "gatherings": "My gatherings",
+      "applications": "Applications",
+      "analytics": "Analytics",
+      "messages": "Messages",
+      "newGathering": "New gathering"
+    },
+    "gatherings": {
+      "title": "My gatherings",
+      "filters": {
+        "all": "الكل",
+        "upcoming": "Upcoming",
+        "past": "Past",
+        "draft": "Draft"
+      },
+      "applications": "applications",
+      "approved": "approved",
+      "fill": "fill rate",
+      "viewApplications": "View applications",
+      "viewPublicPage": "Public page",
+      "empty": "No gatherings yet",
+      "emptyCta": "Create a gathering",
+      "draft": "Draft"
+    },
+    "applications": {
+      "title": "Applications",
+      "filterByGathering": "By gathering",
+      "allGatherings": "All gatherings",
+      "aiMatchScore": "AI match score",
+      "matchHigh": "High match",
+      "matchMedium": "Medium match",
+      "matchLow": "Low match",
+      "motivation": "Motivation",
+      "forGathering": "For gathering",
+      "submittedAgo": "قُدّم {time}",
+      "viewDetails": "View details",
+      "approve": "Approve",
+      "reject": "Reject",
+      "waitlist": "Waitlist",
+      "empty": "No applications",
+      "actions": {
+        "approved": {
+          "title": "Application approved",
+          "description": "سيتم إشعار {name}"
+        },
+        "rejected": {
+          "title": "Application rejected",
+          "description": "سيتم إشعار {name}"
+        },
+        "waitlisted": {
+          "title": "Added to waitlist",
+          "description": "{name} سينتظر"
+        }
+      }
+    },
+    "analytics": {
+      "title": "Analytics",
+      "totalGatherings": "Gatherings",
+      "totalApplications": "Applications",
+      "totalApproved": "Approved",
+      "avgRating": "Average rating",
+      "applicationsOverTime": "Applications over time",
+      "acceptanceRate": "Acceptance rate",
+      "topGatherings": "Top gatherings",
+      "matchScoreDistribution": "Match score distribution",
+      "last6Months": "Last 6 months"
+    },
+    "messages": {
+      "title": "Messages",
+      "comingSoon": "Coming soon",
+      "backToApplications": "Back to applications",
+      "subtitle": "Direct messaging with applicants",
+      "conversations": "Conversations",
+      "empty": "No conversations",
+      "selectConversation": "Select a conversation",
+      "messagePlaceholder": "Type a message..."
+    },
+    "newGathering": {
+      "title": "New gathering",
+      "steps": {
+        "1": "Basics",
+        "2": "Time & place",
+        "3": "Capacity & price",
+        "4": "Content",
+        "5": "Review & create"
+      },
+      "titleAr": "Title (Arabic)",
+      "titleEn": "Title (English)",
+      "topic": "Topic",
+      "format": "Format",
+      "coverImage": "Cover image URL",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "prayerAware": "Prayer-aware",
+      "venueName": "Venue name",
+      "venueAddress": "Address",
+      "hideLocation": "Hide location",
+      "capacityMin": "Min capacity",
+      "capacityMax": "Max capacity",
+      "price": "Price",
+      "isFree": "Free",
+      "applicationsOpen": "Applications open",
+      "applicationsClose": "Applications close",
+      "description": "Description",
+      "applicationQuestions": "Custom questions",
+      "addQuestion": "Add question",
+      "declaration": "I take responsibility",
+      "submit": "Create (draft)",
+      "successTitle": "Gathering created",
+      "successDescription": "Saved as draft"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark all as read",
+    "empty": "No notifications",
+    "viewAll": "View all",
+    "subtitle": "{count} unread",
+    "enableBrowserTitle": "Enable browser notifications",
+    "enableBrowserSubtitle": "Get instant notifications for new applications",
+    "enableBrowser": "Enable",
+    "enabled": "Enabled!",
+    "enabledBody": "You will now receive notifications",
+    "filters": {
+      "all": "All",
+      "unread": "Unread"
+    }
+  },
+  "applications": {
+    "title": "My applications",
+    "matchScore": "Match score",
+    "submittedAt": "قُدّم في {date}",
+    "empty": "No applications",
+    "cancelApplication": "Cancel",
+    "cancelSuccess": "Cancelled",
+    "breadcrumbs": "My applications"
+  },
+  "application_form": {
+    "title": "Apply",
+    "subtitle": "Answer honestly",
+    "steps": {
+      "1": "About you",
+      "2": "Questions",
+      "3": "Logistics",
+      "4": "Review"
+    },
+    "motivation": "Why attend?",
+    "motivationHint": "Write honestly",
+    "motivationCounter": "{count}/50",
+    "background": "Background",
+    "backgroundHint": "Optional",
+    "declaration": "I declare the information is true",
+    "submit": "Submit",
+    "next": "Next",
+    "previous": "Previous",
+    "summary": "Summary",
+    "errors": {
+      "motivation-too-short": "At least 50 chars",
+      "declaration-required": "Required"
+    }
+  },
+  "live": {
+    "backToGathering": "Back to gathering",
+    "live": "Live",
+    "connecting": "Connecting...",
+    "hereNow": "here now",
+    "chat": "Chat",
+    "moments": "Moments",
+    "attendees": "Attendees",
+    "messagePlaceholder": "Type a message...",
+    "typing": "typing...",
+    "addHighlight": "Add highlight",
+    "addQuote": "Add quote",
+    "noMomentsYet": "No moments yet. Be the first!",
+    "whosHere": "Who's here",
+    "host": "Host",
+    "joinedAgo": "Joined {time} min ago",
+    "attendeesCount": "{count} attending",
+    "prayerReminder": "Prayer reminder",
+    "prayerReminderHint": "We will remind you 10 min before each prayer",
+    "enterLiveNow": "Enter live gathering",
+    "enterLiveEarly": "Enter early",
+    "tryLiveDemo": "Try Live Companion"
+  },
+  "pwa": {
+    "installTitle": "Install Lamma",
+    "installSubtitle": "Quick access from your home screen",
+    "install": "Install",
+    "dismiss": "Dismiss"
+  }
+}

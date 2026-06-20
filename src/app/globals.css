@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================================
+   LAMMA — Design Tokens (Tailwind 4 @theme)
+   Brand colors are exposed as utilities: bg-sand, bg-paper, text-ink,
+   text-clay, bg-clay, text-teal, bg-teal, text-saffron, text-stone,
+   bg-success, text-success, etc.
+   shadcn/ui semantic tokens (background, primary, card, ...) are mapped
+   onto the Lamma palette below.
+   NO indigo / blue / violet / purple from Tailwind defaults are used.
+   ========================================================================= */
+@theme inline {
+  /* Brand palette */
+  --color-sand: #F4EDE0;
+  --color-paper: #FBF8F2;
+  --color-ink: #1A1614;
+  --color-clay: #B85C3E;
+  --color-teal: #2A5F5A;
+  --color-saffron: #E8A93C;
+  --color-stone: #8B8478;
+  --color-success: #4A7C59;
+  --color-warning: #E8A93C;
+  --color-error: #B85C3E;
+
+  /* shadcn semantic -> Lamma */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Font families (variables come from next/font in layout) */
+  --font-sans: var(--font-body-en), var(--font-arabic), system-ui, sans-serif;
+  --font-display: var(--font-display-en), var(--font-arabic), serif;
+  --font-arabic: var(--font-arabic), system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* shadcn semantics -> Lamma palette */
+  --background: #F4EDE0;   /* sand */
+  --foreground: #1A1614;   /* ink */
+  --card: #FBF8F2;         /* paper */
+  --card-foreground: #1A1614;
+  --popover: #FBF8F2;
+  --popover-foreground: #1A1614;
+  --primary: #B85C3E;      /* clay */
+  --primary-foreground: #FBF8F2;
+  --secondary: #EDE3D1;    /* sand-deep */
+  --secondary-foreground: #1A1614;
+  --muted: #EDE3D1;
+  --muted-foreground: #8B8478; /* stone */
+  --accent: #2A5F5A;       /* teal */
+  --accent-foreground: #FBF8F2;
+  --destructive: #B85C3E;  /* clay as destructive */
+  --border: #E0D5C2;       /* sand border */
+  --input: #E0D5C2;
+  --ring: #B85C3E;
+  --chart-1: #B85C3E;
+  --chart-2: #2A5F5A;
+  --chart-3: #E8A93C;
+  --chart-4: #4A7C59;
+  --chart-5: #8B5A3C;
+  --sidebar: #FBF8F2;
+  --sidebar-foreground: #1A1614;
+  --sidebar-primary: #B85C3E;
+  --sidebar-primary-foreground: #FBF8F2;
+  --sidebar-accent: #EDE3D1;
+  --sidebar-accent-foreground: #1A1614;
+  --sidebar-border: #E0D5C2;
+  --sidebar-ring: #B85C3E;
+
+  /* Brand elevation */
+  --shadow-soft: 0 4px 24px rgba(26, 22, 20, 0.06);
+  --shadow-card: 0 8px 32px rgba(26, 22, 20, 0.08);
+}
+
+.dark {
+  --background: #1A1614;
+  --foreground: #F4EDE0;
+  --card: #26201D;
+  --card-foreground: #F4EDE0;
+  --popover: #26201D;
+  --popover-foreground: #F4EDE0;
+  --primary: #E8A93C;
+  --primary-foreground: #1A1614;
+  --secondary: #2A2420;
+  --secondary-foreground: #F4EDE0;
+  --muted: #2A2420;
+  --muted-foreground: #B8B0A4;
+  --accent: #2A5F5A;
+  --accent-foreground: #F4EDE0;
+  --destructive: #B85C3E;
+  --border: rgba(244, 237, 224, 0.12);
+  --input: rgba(244, 237, 224, 0.15);
+  --ring: #E8A93C;
+  --sidebar: #26201D;
+  --sidebar-foreground: #F4EDE0;
+  --sidebar-primary: #E8A93C;
+  --sidebar-primary-foreground: #1A1614;
+  --sidebar-accent: #2A2420;
+  --sidebar-accent-foreground: #F4EDE0;
+  --sidebar-border: rgba(244, 237, 224, 0.12);
+  --sidebar-ring: #E8A93C;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-family: var(--font-body-en), var(--font-arabic), system-ui, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  [dir="rtl"] body,
+  [lang="ar"] body {
+    font-family: var(--font-arabic), system-ui, sans-serif;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display-en), var(--font-arabic), serif;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4 {
+    font-family: var(--font-arabic), system-ui, sans-serif;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+
+  /* Tabular numerals for prices / counts */
+  .tabular {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background-color: var(--color-clay);
+    color: var(--color-paper);
+  }
+}
+
+/* Soft custom scrollbar for long editorial lists */
+.scroll-lamma {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-stone) transparent;
+}
+.scroll-lamma::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll-lamma::-webkit-scrollbar-track { background: transparent; }
+.scroll-lamma::-webkit-scrollbar-thumb {
+  background-color: rgba(139, 132, 120, 0.45);
+  border-radius: 9999px;
+}
+.scroll-lamma::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-clay);
+}
+
+/* Editorial link underline — used in hero / letters */
+.link-editorial {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.4s ease;
+}
+.link-editorial:hover {
+  background-size: 100% 1px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,420 @@
+// ============================================================================
+//  Lamma — Prisma Schema (Phase 0)
+//  Adapted for SQLite. Every line that must change when migrating to
+//  PostgreSQL is marked with `// PROD-ONLY:` so the migration is mechanical.
+//  See /GLM-5.2-FullStack-Build-Reference.md and the project documentation.
+//
+//  SQLite adaptation rules applied:
+//    Json                    -> String  (JSON.stringify / JSON.parse in code)
+//    String[]                -> String  (join with "|" or use a join table)
+//    Unsupported("vector")   -> String? (JSON array mock of the embedding)
+//    Decimal(10,3)           -> Float   (KWD 3-decimal precision)
+//    enum                    -> String  (+ Zod validation in src/data/types.ts)
+//    @db.Date / @db.Text     -> DateTime / String
+// ============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ----------------------------------------------------------------------------
+//  User
+// ----------------------------------------------------------------------------
+model User {
+  id              String   @id @default(cuid())
+  email           String   @unique
+  phone           String?  @unique
+  passwordHash    String
+
+  // PROD-ONLY: name should be Json { ar, en } — use JSON.parse
+  name            String
+  // PROD-ONLY: bio should be Json { ar, en }
+  bio             String?
+  avatarUrl       String?
+  dateOfBirth     DateTime?
+  gender          String?  // enum: "male" | "female"
+  nationality     String?
+
+  // PROD-ONLY: interests should be String[] — use split('|')
+  interests       String   @default("")
+  // PROD-ONLY: embedding should be Unsupported("vector(1536)") — JSON array mock here
+  embedding       String?
+
+  membershipTier  String   @default("NEWCOMER") // enum: NEWCOMER | REGULAR | CURATOR | HOST
+  hostedCount     Int      @default(0)
+  attendedCount   Int      @default(0)
+
+  emailVerifiedAt DateTime?
+  lastLoginAt     DateTime?
+  locale          String   @default("ar") // enum: ar | en
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  host            Host?
+  applications    Application[]
+  memberships     Membership[]
+  reviewsGiven    Review[]         @relation("ReviewReviewer")
+  notifications   Notification[]
+  messagesSent    Message[]        @relation("MessageSender")
+  messagesRecv    Message[]        @relation("MessageReceiver")
+  matchesA        AttendeeMatch[]  @relation("MatchUserA")
+  matchesB        AttendeeMatch[]  @relation("MatchUserB")
+  waitlist        WaitlistEntry[]
+
+  @@index([membershipTier])
+  @@index([gender])
+}
+
+// ----------------------------------------------------------------------------
+//  Host — a curated User who can host gatherings
+// ----------------------------------------------------------------------------
+model Host {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  handle          String   @unique // @handle, e.g. @abdullah_kuwaiti_historian
+
+  // PROD-ONLY: displayName / bio should be Json { ar, en }
+  displayName     String
+  bio             String
+  avatarUrl       String?
+  coverUrl        String?
+  isVerified      Boolean  @default(false)
+  verifiedAt      DateTime?
+
+  // PROD-ONLY: specialties should be Json[] or String[] — use split('|')
+  specialties     String   @default("")
+  // PROD-ONLY: topicSlugs should be String[] — use split('|')
+  topicSlugs      String   @default("")
+
+  totalGatherings Int      @default(0)
+  totalAttendees  Int      @default(0)
+  avgRating       Float    @default(0) // 0..5
+  responseTimeHours Int    @default(24)
+  instagram       String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  gatherings      Gathering[]
+  letters         Letter[]
+
+  @@index([isVerified])
+}
+
+// ----------------------------------------------------------------------------
+//  Topic — editorial theme (seeded, rarely written)
+// ----------------------------------------------------------------------------
+model Topic {
+  id              String   @id @default(cuid())
+  slug            String   @unique // memory-of-place, food-stories, ...
+  // PROD-ONLY: name / description should be Json { ar, en }
+  name            String
+  description     String
+  color           String   @default("#B85C3E") // hex
+  coverImageUrl   String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  gatherings      Gathering[]
+  letters         Letter[]
+
+  @@index([slug])
+}
+
+// ----------------------------------------------------------------------------
+//  Gathering — the core entity
+// ----------------------------------------------------------------------------
+model Gathering {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+
+  // PROD-ONLY: title / description should be Json { ar, en }
+  title           String
+  description     String
+  coverImageUrl   String?
+  // PROD-ONLY: galleryUrls should be String[] — use split('|')
+  galleryUrls     String   @default("")
+
+  startDate       DateTime
+  endDate         DateTime
+  isPrayerAware   Boolean  @default(true)
+
+  // PROD-ONLY: venueName / venueAddress / venueNotes should be Json { ar, en }
+  venueName       String
+  venueAddress    String
+  venueLat        Float
+  venueLng        Float
+  venueNotes      String   @default("")
+
+  format          String   @default("MIXED") // enum: MEN_ONLY | WOMEN_ONLY | FAMILY | MIXED
+  capacityMin     Int      @default(5)
+  capacityMax     Int      @default(20)
+  // PROD-ONLY: priceKwd should be Decimal(10,3) — KWD 3-decimal precision
+  priceKwd        Float    @default(0)
+  isFree          Boolean  @default(false)
+
+  // PROD-ONLY: applicationQuestions should be Json[] — store as JSON string
+  applicationQuestions String @default("[]")
+
+  status          String   @default("DRAFT") // enum: DRAFT | PUBLISHED | APPLICATIONS_OPEN | APPLICATIONS_CLOSED | IN_PROGRESS | COMPLETED | CANCELLED
+  applicationsOpenAt   DateTime?
+  applicationsCloseAt  DateTime?
+
+  approvedAttendeesCount Int @default(0)
+
+  hostId          String
+  topicId         String
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  host            Host     @relation(fields: [hostId], references: [id], onDelete: Cascade)
+  topic           Topic    @relation(fields: [topicId], references: [id], onDelete: Restrict)
+  applications    Application[]
+  waitlist        WaitlistEntry[]
+  letters         Letter[]
+  moments         Moment[]
+  reviews         Review[]
+
+  @@index([status])
+  @@index([startDate])
+  @@index([hostId])
+  @@index([topicId])
+}
+
+// ----------------------------------------------------------------------------
+//  Application — a user applying to join a gathering
+// ----------------------------------------------------------------------------
+model Application {
+  id              String   @id @default(cuid())
+  userId          String
+  gatheringId     String
+
+  // PROD-ONLY: answers should be Json[] — store as JSON string of Q&A pairs
+  answers         String   @default("[]")
+  status          String   @default("PENDING") // enum: PENDING | APPROVED | REJECTED | WAITLISTED | CANCELLED
+  note            String?
+
+  reviewedAt      DateTime?
+  reviewedBy      String? // host userId
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  gathering       Gathering @relation(fields: [gatheringId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, gatheringId])
+  @@index([status])
+  @@index([gatheringId])
+}
+
+// ----------------------------------------------------------------------------
+//  Membership — a user's tier history / subscription record
+// ----------------------------------------------------------------------------
+model Membership {
+  id              String   @id @default(cuid())
+  userId          String
+  tier            String   @default("NEWCOMER") // enum: NEWCOMER | REGULAR | CURATOR | HOST
+  startedAt       DateTime @default(now())
+  endedAt         DateTime?
+  note            String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, tier])
+}
+
+// ----------------------------------------------------------------------------
+//  Letter — editorial long-form essay published after a gathering
+// ----------------------------------------------------------------------------
+model Letter {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+
+  // PROD-ONLY: title / subtitle / excerpt / content should be Json { ar, en }
+  title           String
+  subtitle        String
+  excerpt         String
+  content         String   // Markdown
+  coverImageUrl   String?
+  // PROD-ONLY: galleryUrls should be String[] — use split('|')
+  galleryUrls     String   @default("")
+  readTimeMinutes Int      @default(5)
+
+  publishedAt     DateTime @default(now())
+  isPublished     Boolean  @default(false)
+
+  topicId         String
+  authorHostId    String
+  gatheringId     String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  topic           Topic    @relation(fields: [topicId], references: [id], onDelete: Restrict)
+  authorHost      Host     @relation(fields: [authorHostId], references: [id], onDelete: Restrict)
+  gathering       Gathering? @relation(fields: [gatheringId], references: [id], onDelete: SetNull)
+
+  @@index([publishedAt])
+  @@index([topicId])
+}
+
+// ----------------------------------------------------------------------------
+//  Moment — a captured moment from a gathering (photo + caption)
+// ----------------------------------------------------------------------------
+model Moment {
+  id              String   @id @default(cuid())
+  gatheringId     String
+  imageUrl        String
+  // PROD-ONLY: caption should be Json { ar, en }
+  caption         String
+  capturedByUserId String?
+  capturedAt      DateTime @default(now())
+
+  createdAt       DateTime @default(now())
+
+  gathering       Gathering @relation(fields: [gatheringId], references: [id], onDelete: Cascade)
+
+  @@index([gatheringId])
+}
+
+// ----------------------------------------------------------------------------
+//  PrayerTime — cached daily prayer times for a city
+// ----------------------------------------------------------------------------
+model PrayerTime {
+  id              String   @id @default(cuid())
+  city            String   @default("Kuwait")
+  date            DateTime // @db.Date in PROD-ONLY
+  fajr            String   // "HH:mm"
+  sunrise         String
+  dhuhr           String
+  asr             String
+  maghrib         String
+  isha            String
+
+  createdAt       DateTime @default(now())
+
+  @@unique([city, date])
+  @@index([city, date])
+}
+
+// ----------------------------------------------------------------------------
+//  AttendeeMatch — affinity between two users (for "who you might meet")
+// ----------------------------------------------------------------------------
+model AttendeeMatch {
+  id              String   @id @default(cuid())
+  userAId         String
+  userBId         String
+  gatheringId     String?
+  // PROD-ONLY: score should be Float; affinityTags should be String[]
+  score           Float    @default(0)
+  affinityTags    String   @default("")
+  reason          String?
+
+  createdAt       DateTime @default(now())
+
+  userA           User     @relation("MatchUserA", fields: [userAId], references: [id], onDelete: Cascade)
+  userB           User     @relation("MatchUserB", fields: [userBId], references: [id], onDelete: Cascade)
+
+  @@unique([userAId, userBId, gatheringId])
+  @@index([userAId])
+  @@index([userBId])
+}
+
+// ----------------------------------------------------------------------------
+//  WaitlistEntry — overflow interest when a gathering is full
+// ----------------------------------------------------------------------------
+model WaitlistEntry {
+  id              String   @id @default(cuid())
+  userId          String
+  gatheringId     String
+  position        Int
+  note            String?
+  promotedAt      DateTime?
+
+  createdAt       DateTime @default(now())
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  gathering       Gathering @relation(fields: [gatheringId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, gatheringId])
+  @@index([gatheringId, position])
+}
+
+// ----------------------------------------------------------------------------
+//  Review — feedback left after a gathering
+// ----------------------------------------------------------------------------
+model Review {
+  id              String   @id @default(cuid())
+  reviewerUserId  String
+  gatheringId     String?
+  hostId          String?
+  rating          Int      // 1..5
+  // PROD-ONLY: body should be Json { ar, en } or @db.Text
+  body            String   @default("")
+  isPublic        Boolean  @default(true)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  reviewer        User     @relation("ReviewReviewer", fields: [reviewerUserId], references: [id], onDelete: Cascade)
+  gathering       Gathering? @relation(fields: [gatheringId], references: [id], onDelete: SetNull)
+
+  @@index([gatheringId])
+  @@index([hostId])
+}
+
+// ----------------------------------------------------------------------------
+//  Notification — in-app notification for a user
+// ----------------------------------------------------------------------------
+model Notification {
+  id              String   @id @default(cuid())
+  userId          String
+  type            String   // enum-ish: GATHERING_REMINDER | APPLICATION_UPDATE | LETTER_PUBLISHED | ...
+  // PROD-ONLY: payload should be Json
+  payload         String   @default("{}")
+  isRead          Boolean  @default(false)
+  readAt          DateTime?
+
+  createdAt       DateTime @default(now())
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, isRead])
+}
+
+// ----------------------------------------------------------------------------
+//  Message — direct message between two users (host <-> attendee)
+// ----------------------------------------------------------------------------
+model Message {
+  id              String   @id @default(cuid())
+  senderId        String
+  receiverId      String
+  // PROD-ONLY: body should be @db.Text
+  body            String
+  // PROD-ONLY: attachments should be Json[]
+  attachments     String   @default("[]")
+  readAt          DateTime?
+
+  createdAt       DateTime @default(now())
+
+  sender          User     @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver        User     @relation("MessageReceiver", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@index([senderId, receiverId])
+  @@index([receiverId, readAt])
+}
