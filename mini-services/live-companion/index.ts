@@ -1,7 +1,9 @@
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 
-const PORT = 3003;
+// Read port from env (Railway sets LIVE_COMPANION_PORT).
+// Falls back to 3003 for local dev.
+const PORT = parseInt(process.env.LIVE_COMPANION_PORT ?? '3003', 10);
 
 const httpServer = createServer();
 const io = new Server(httpServer, {

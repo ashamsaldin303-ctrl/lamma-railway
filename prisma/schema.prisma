@@ -18,6 +18,11 @@ generator client {
 }
 
 datasource db {
+  // SQLite is used for local dev and the first Railway deploy (Phase A).
+  // For production with PostgreSQL (Phase B), change to:
+  //   provider   = "postgresql"
+  //   directUrl  = env("DIRECT_URL")
+  //   extensions = [vector, pg_trgm]
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }

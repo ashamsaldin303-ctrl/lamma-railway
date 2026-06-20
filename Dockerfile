@@ -11,7 +11,9 @@ FROM oven/bun:1-slim AS deps
 WORKDIR /app
 
 # Copy lockfiles first (cache layer)
-COPY package.json bun.lockb ./
+# NOTE: Bun 1.2+ uses `bun.lock` (text-based) instead of `bun.lockb` (binary).
+# If both exist, prefer `bun.lock` (the newer format).
+COPY package.json bun.lock ./
 
 # Install all deps (including devDependencies for build)
 RUN bun install --frozen-lockfile
@@ -45,7 +47,7 @@ RUN cd mini-services/live-companion && bun install --production
 FROM oven/bun:1-slim AS prod-deps
 WORKDIR /app
 
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 
 # Install production deps WITH transitive deps (ignore-scripts avoids native rebuilds)
 RUN bun install --production --frozen-lockfile --ignore-scripts
@@ -100,4 +102,6 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://localhost:3000/api/v1/health || exit 1
 
 # Start both services: Next.js (port 3000) + Live Companion (port 3003)
-CMD ["sh", "-c", "echo '=== Lamma startup ===' && echo \"DATABASE_URL: $([ -n \\\"$DATABASE_URL\\\" ] && echo set || echo NOT SET)\" && echo \"NODE_ENV: $NODE_ENV\" && bun ./node_modules/prisma/build/index.js db push ; node server.js & cd mini-services/live-companion && bun run start & wait"]
+# IMPORTANT: Use `bun server.js` (not `node server.js`) because the base image
+# `oven/bun:1-slim` does NOT include Node.js — only Bun.
+CMD ["sh", "-c", "echo '=== Lamma startup ===' && echo \"DATABASE_URL: $([ -n \\\"$DATABASE_URL\\\" ] && echo set || echo NOT SET)\" && echo \"NODE_ENV: $NODE_ENV\" && bun ./node_modules/prisma/build/index.js db push ; bun server.js & cd mini-services/live-companion && bun run start & wait"]
