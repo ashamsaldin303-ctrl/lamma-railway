@@ -110,6 +110,10 @@ COPY --chown=nextjs:nodejs package.json ./package.json
 # Copy Live Companion mini-service
 COPY --from=builder --chown=nextjs:nodejs /app/mini-services ./mini-services
 
+# Copy env injection script (replaces NEXT_PUBLIC_* placeholders at runtime)
+COPY --chown=nextjs:nodejs scripts/inject-env.sh ./scripts/inject-env.sh
+RUN chmod +x ./scripts/inject-env.sh
+
 USER nextjs
 
 # Railway exposes ports via EXPOSE
@@ -126,4 +130,5 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
 # IMPORTANT: Use `bun server.js` (not `node server.js`) because the base image
 # `oven/bun:1-slim` does NOT include Node.js — only Bun.
 # Phase B: uses `migrate deploy` (not `db push`) to apply committed migrations.
-CMD ["sh", "-c", "echo '=== Lamma startup (Phase B) ===' && echo \"DATABASE_URL: $([ -n \\\"$DATABASE_URL\\\" ] && echo set || echo NOT SET)\" && echo \"DIRECT_URL: $([ -n \\\"$DIRECT_URL\\\" ] && echo set || echo NOT SET)\" && echo \"NODE_ENV: $NODE_ENV\" && bun ./node_modules/prisma/build/index.js migrate deploy ; bun server.js & cd mini-services/live-companion && bun run start & wait"]
+# Runtime: inject-env.sh replaces NEXT_PUBLIC_* placeholders before server start.
+CMD ["sh", "-c", "echo '=== Lamma startup (Phase B) ===' && echo \"DATABASE_URL: $([ -n \\\"$DATABASE_URL\\\" ] && echo set || echo NOT SET)\" && echo \"DIRECT_URL: $([ -n \\\"$DIRECT_URL\\\" ] && echo set || echo NOT SET)\" && echo \"NODE_ENV: $NODE_ENV\" && bun ./node_modules/prisma/build/index.js migrate deploy ; sh scripts/inject-env.sh ; bun server.js & cd mini-services/live-companion && bun run start & wait"]
