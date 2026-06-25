@@ -1,4 +1,4 @@
-import type { DemoUser } from '@/data/demo-users';
+import type { MatchableUser } from './engine';
 import type { Gathering } from '@/data/gatherings';
 import { findSimilarAttendees, tokenize } from './engine';
 import { topics } from '@/data/topics';
@@ -10,7 +10,7 @@ export interface RecommendationReason {
   topicSlug?: string;
 }
 
-export function explainRecommendation(user: DemoUser, gathering: Gathering, _score: number): RecommendationReason[] {
+export function explainRecommendation(user: MatchableUser, gathering: Gathering, _score: number): RecommendationReason[] {
   const reasons: RecommendationReason[] = [];
   const topic = topics.find((t) => t.slug === gathering.topicSlug);
   if (topic) {

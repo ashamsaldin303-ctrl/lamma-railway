@@ -1,10 +1,9 @@
 import { generateText } from '../llm-client';
-import { computeMatchScore, findSimilarAttendees, findSharedInterests } from '@/lib/matching/engine';
-import type { DemoUser } from '@/data/demo-users';
+import { computeMatchScore, findSimilarAttendees, findSharedInterests, type MatchableUser } from '@/lib/matching/engine';
 import type { Gathering } from '@/data/gatherings';
 
 interface InsightInput {
-  applicant: DemoUser;
+  applicant: MatchableUser;
   gathering: Gathering;
   locale: 'ar' | 'en';
 }
@@ -18,6 +17,8 @@ export async function generateReviewInsight(input: InsightInput): Promise<string
     ? findSharedInterests(applicant, similarAttendees[0].user)
     : [];
 
+  const attendedCount = 'attendedCount' in applicant ? (applicant as { attendedCount: number }).attendedCount : 0;
+
   const prompt = `
 أعطِ صاحب التجمع رؤية ذكية ومختصرة (جملتان كحد أقصى) عن هذا المتقدم:
 
@@ -25,7 +26,7 @@ export async function generateReviewInsight(input: InsightInput): Promise<string
 - الاسم: ${applicant.nameLocalized[locale]}
 - الاهتمامات: ${applicant.interests.join('، ')}
 - مستوى العضوية: ${applicant.membershipTier}
-- عدد اللمات السابقة: ${applicant.attendedCount}
+- عدد اللمات السابقة: ${attendedCount}
 - نتيجة المطابقة: ${matchScore}%
 
 اللمة: ${gathering.title[locale]} (${gathering.topicSlug})

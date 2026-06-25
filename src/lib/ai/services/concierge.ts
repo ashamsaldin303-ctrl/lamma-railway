@@ -1,11 +1,10 @@
 import { generateText } from '../llm-client';
-import { recommendGatheringsForUser } from '@/lib/matching/engine';
+import { recommendGatheringsForUser, type MatchableUser } from '@/lib/matching/engine';
 import { gatherings } from '@/data/gatherings';
 import { topics } from '@/data/topics';
-import type { DemoUser } from '@/data/demo-users';
 
 interface ConciergeContext {
-  user: DemoUser | null;
+  user: MatchableUser | null;
   locale: 'ar' | 'en';
 }
 
@@ -20,7 +19,7 @@ export async function askConcierge(question: string, context: ConciergeContext):
 - الاسم: ${user.nameLocalized[locale]}
 - الاهتمامات: ${user.interests.join('، ')}
 - مستوى العضوية: ${user.membershipTier}
-- عدد اللمات السابقة: ${user.attendedCount}
+- عدد اللمات السابقة: ${'attendedCount' in user ? (user as { attendedCount: number }).attendedCount : 0}
 
 توصيات مخصصة للمستخدم:
 ${recs.map(({ gathering, score }) => `- ${gathering.title[locale]} (نتيجة المطابقة: ${score}%)`).join('\n')}
