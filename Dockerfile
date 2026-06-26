@@ -122,5 +122,4 @@ USER nextjs
 # Do NOT add Dockerfile HEALTHCHECK — it conflicts with Railway's.
 
 # Start Next.js server only.
-# Migrations are already applied. inject-env.sh removed to isolate startup issues.
 CMD ["sh", "-c", "echo '=== Lamma startup ===' && echo \"PORT: $PORT\" && exec bun server.js"]
