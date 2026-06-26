@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { ClerkProvider } from '@clerk/nextjs';
 import { routing, type Locale } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import { SiteHeader } from '@/components/lamma/SiteHeader';
@@ -10,6 +9,10 @@ import { SiteFooter } from '@/components/lamma/SiteFooter';
 import { Toaster } from '@/components/ui/toaster';
 import { InstallPrompt } from '@/components/lamma/pwa/InstallPrompt';
 import '@/app/globals.css';
+
+// PROD-ONLY: Re-enable ClerkProvider once the publishable key is confirmed
+// to be present in the build-time environment variables.
+// import { ClerkProvider } from '@clerk/nextjs';
 
 /** Pre-render both locales at build time. */
 export function generateStaticParams() {
@@ -77,22 +80,15 @@ export default async function LocaleLayout({ children, params }: Props & { child
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning className={fontVariables}>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
-        <ClerkProvider
-          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-          signInUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}
-          signUpUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}
-          signInFallbackRedirectUrl={process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL}
-          signUpFallbackRedirectUrl={process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL}
-        >
-          <NextIntlClientProvider messages={messages}>
-            <div className="flex min-h-screen flex-col">
-              <SiteHeader />
-              <main className="flex-1" id="main-content">{children}</main>
-              <SiteFooter />
-            </div>
-            <InstallPrompt />
-          </NextIntlClientProvider>
-        </ClerkProvider>
+        {/* PROD-ONLY: Wrap with <ClerkProvider publishableKey={...}>...</ClerkProvider> */}
+        <NextIntlClientProvider messages={messages}>
+          <div className="flex min-h-screen flex-col">
+            <SiteHeader />
+            <main className="flex-1" id="main-content">{children}</main>
+            <SiteFooter />
+          </div>
+          <InstallPrompt />
+        </NextIntlClientProvider>
         <Toaster />
         <script
           dangerouslySetInnerHTML={{
